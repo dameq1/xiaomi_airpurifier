@@ -15,7 +15,7 @@ _MODEL_AIRPURIFIER_ZA1 = {
     "power": {"siid": 2, "piid": 1},
     "mode": {"siid": 2, "piid": 5},
     # Environment
-    "aqi": {"siid": 3, "piid": 1},
+    "tvoc": {"siid": 3, "piid": 1},
     "pm25": {"siid": 3, "piid": 6},
     "humidity": {"siid": 3, "piid": 7},
     "temperature": {"siid": 3, "piid": 8},
@@ -79,9 +79,9 @@ class BasicAirPurifierMiotStatus(DeviceStatus):
         return "on" if self.is_on else "off"
 
     @property
-    def aqi(self) -> int:
+    def tvoc(self) -> int:
         """Air quality index."""
-        return self.data["aqi"]
+        return self.data["tvoc"]
 
     @property
     def mode(self) -> OperationMode:
@@ -128,7 +128,7 @@ class AirPurifierZA1Status(BasicAirPurifierMiotStatus):
     {
         'power': True,
         'mode': 1,
-        'aqi': 2,
+        'tvoc': 2,
         'filter_life_remaining': 97,
         'filter_hours_used': 100,
         'buzzer': True,
@@ -143,7 +143,7 @@ class AirPurifierZA1Status(BasicAirPurifierMiotStatus):
     [
         {'did': 'power', 'siid': 2, 'piid': 1, 'code': 0, 'value': True},
         {'did': 'mode', 'siid': 2, 'piid': 4, 'code': 0, 'value': 1},
-        {'did': 'aqi', 'siid': 3, 'piid': 4, 'code': 0, 'value': 3},
+        {'did': 'tvoc', 'siid': 3, 'piid': 4, 'code': 0, 'value': 3},
         {'did': 'filter_life_remaining', 'siid': 4, 'piid': 1, 'code': 0, 'value': 97},
         {'did': 'filter_hours_used', 'siid': 4, 'piid': 3, 'code': 0, 'value': 100},
         {'did': 'buzzer', 'siid': 6, 'piid': 1, 'code': 0, 'value': True},
@@ -307,8 +307,8 @@ class AirPurifierZA1(BasicAirPurifierMiot):
         default_output=format_output(
             "",
             "Power: {result.power}\n"
-            "AQI: {result.aqi} μg/m³\n"
-            "PM2.5: {result.pm25}\n"
+            "TVOC: {result.tvoc} μg/m³\n"
+            "PM2.5: {result.pm25} ppm\n"
             "Mode: {result.mode}\n"
             "LED brightness level: {result.led_brightness_level}\n"
             "Buzzer: {result.buzzer}\n"

@@ -260,6 +260,9 @@ ATTR_SLEEP_MODE = "sleep_mode"
 ATTR_VOLUME = "volume"
 ATTR_USE_TIME = "use_time"
 ATTR_BUTTON_PRESSED = "button_pressed"
+# Air Purifier ZA1
+ATTR_PM25 = "PM25"
+ATTR_TVOC = "TVOC"
 
 # Air Humidifier
 ATTR_TARGET_HUMIDITY = "target_humidity"
@@ -295,7 +298,6 @@ ATTR_NTC_TEMPERATURE = "ntc_temperature"
 
 # Air Fresh T2017
 ATTR_POWER = "power"
-ATTR_PM25 = "pm25"
 ATTR_FAVORITE_SPEED = "favorite_speed"
 ATTR_CONTROL_SPEED = "control_speed"
 ATTR_DUST_FILTER_LIFE_REMAINING = "dust_filter_life_remaining"
@@ -440,7 +442,7 @@ AVAILABLE_ATTRIBUTES_AIRPURIFIER_3 = {
 AVAILABLE_ATTRIBUTES_AIRPURIFIER_ZA1 = {
     ATTR_TEMPERATURE: "temperature",
     ATTR_HUMIDITY: "humidity",
-    ATTR_AIR_QUALITY_INDEX: "aqi",
+    ATTR_TVOC: "tvoc",
     ATTR_PM25: "pm25",
     ATTR_MODE: "mode",
     ATTR_FILTER_HOURS_USED: "filter_hours_used",
