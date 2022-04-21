@@ -1,7 +1,7 @@
 {
-  "name": "Xiaomi Mi Air Purifier, Air Humidifier, Air Fresh and Pedestal Fan Integration",
+  "name": "Smartmi Air Purifier Integration",
   "content_in_root": false,
   "render_readme": true,
   "iot_class": "local_polling",
-  "homeassistant": "2021.5.1"
+  "homeassistant": "2022.4.1"
 }
