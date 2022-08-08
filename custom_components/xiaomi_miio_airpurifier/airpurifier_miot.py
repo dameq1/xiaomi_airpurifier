@@ -4,7 +4,7 @@ from typing import Any, Dict, Optional
 
 import click
 
-from miio.airfilter_util import FilterTypeUtil
+from miio.integrations.airpurifier.zhimi.airfilter_util import FilterTypeUtil
 from miio.click_common import EnumType, command, format_output
 from miio.exceptions import DeviceException
 from miio.miot_device import DeviceStatus, MiotDevice
