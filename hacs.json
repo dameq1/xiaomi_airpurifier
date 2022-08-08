@@ -2,6 +2,5 @@
   "name": "Smartmi Air Purifier Integration",
   "content_in_root": false,
   "render_readme": true,
-  "iot_class": "local_polling",
-  "homeassistant": "2022.4.1"
+  "homeassistant": "2022.8.0"
 }
